@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "774881090019",
+    "firebase_url": "https://fir-one-to-one-messaging.firebaseio.com",
+    "project_id": "fir-one-to-one-messaging",
+    "storage_bucket": "fir-one-to-one-messaging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774881090019:android:827d22191e7bd007",
+        "android_client_info": {
+          "package_name": "com.muhaiminurabir.firebaseonetoonemessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774881090019-hpjjm61pm1onkmp4l13n94h4dslmjoct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.muhaiminurabir.firebaseonetoonemessaging",
+            "certificate_hash": "dd18419efaafb8d129d58c4713f6624fc56e1f0a"
+          }
+        },
+        {
+          "client_id": "774881090019-2qcsd02soqfrcf74881g7kddgalghj0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBelBIQMvQTkVu6hnE_-58R9uMNW5_xrdg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774881090019-2qcsd02soqfrcf74881g7kddgalghj0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
