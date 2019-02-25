@@ -54,7 +54,7 @@ public class Chat_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mMainView= inflater.inflate(R.layout.fragment_chat_, container, false);
+        mMainView = inflater.inflate(R.layout.fragment_chat_, container, false);
 
         mConvList = (RecyclerView) mMainView.findViewById(R.id.conv_list);
         mAuth = FirebaseAuth.getInstance();
@@ -75,7 +75,7 @@ public class Chat_Fragment extends Fragment {
         mConvList.setHasFixedSize(true);
         mConvList.setLayoutManager(linearLayoutManager);
 
-        return  mMainView;
+        return mMainView;
     }
 
     @Override
@@ -92,7 +92,6 @@ public class Chat_Fragment extends Fragment {
         ) {
             @Override
             protected void populateViewHolder(final ConvViewHolder convViewHolder, final Conv conv, int i) {
-
 
 
                 final String list_user_id = getRef(i).getKey();
@@ -137,7 +136,7 @@ public class Chat_Fragment extends Fragment {
                         final String userName = dataSnapshot.child("name").getValue().toString();
                         String userThumb = dataSnapshot.child("thumb_image").getValue().toString();
 
-                        if(dataSnapshot.hasChild("online")) {
+                        if (dataSnapshot.hasChild("online")) {
 
                             String userOnline = dataSnapshot.child("online").getValue().toString();
                             convViewHolder.setUserOnline(userOnline);
@@ -187,12 +186,12 @@ public class Chat_Fragment extends Fragment {
 
         }
 
-        public void setMessage(String message, boolean isSeen){
+        public void setMessage(String message, boolean isSeen) {
 
             TextView userStatusView = (TextView) mView.findViewById(R.id.user_single_status);
             userStatusView.setText(message);
 
-            if(!isSeen){
+            if (!isSeen) {
                 userStatusView.setTypeface(userStatusView.getTypeface(), Typeface.BOLD);
             } else {
                 userStatusView.setTypeface(userStatusView.getTypeface(), Typeface.NORMAL);
@@ -200,14 +199,14 @@ public class Chat_Fragment extends Fragment {
 
         }
 
-        public void setName(String name){
+        public void setName(String name) {
 
             TextView userNameView = (TextView) mView.findViewById(R.id.user_single_name);
             userNameView.setText(name);
 
         }
 
-        public void setUserImage(String thumb_image, Context ctx){
+        public void setUserImage(String thumb_image, Context ctx) {
 
             CircularImageView userImageView = (CircularImageView) mView.findViewById(R.id.user_single_image);
             Picasso.with(ctx).load(thumb_image).placeholder(R.drawable.default_avatar).into(userImageView);
@@ -218,7 +217,7 @@ public class Chat_Fragment extends Fragment {
 
             ImageView userOnlineView = (ImageView) mView.findViewById(R.id.user_single_online_icon);
 
-            if(online_status.equals("true")){
+            if (online_status.equals("true")) {
 
                 userOnlineView.setVisibility(View.VISIBLE);
 
